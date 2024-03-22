@@ -2,32 +2,248 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  .linearGradient {
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
   }
-}
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid #8080802f;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e6e6e6;
+    border-radius: 5px;
+  } 
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+  }
+  /* React Collapse */
+  .ReactCollapse--collapse {
+    transition: height 500ms;
+  }
+/* body{
+  height: 500vh;
+} */
+  
+  @layer base {
+  
+    .active{
+      @apply text-secondary relative flex-1 after:w-full after:h-[1px] after:bg-secondary after:absolute after:-bottom-3 after:right-0;
+    }
+    
+    .h1 {
+      @apply text-[48px] leading-tight md:text-[72px] md:leading-[1.3] mb-8 font-bold;
+    }
+  
+    .h2 {
+      @apply text-[44px] leading-tight md:text-[55px] md:leading-[1.3] mb-4 font-bold;
+    }
+  
+    .h3 {
+      @apply text-[32px] leading-tight md:text-[36px] md:leading-[1.3] mb-4 font-semibold;
+    }
+  
+    p {
+      @apply leading-[1.3] text-gray-30 text-[15px];
+    }
+  }
+  
+  @layer utilities {
+  
+    .btn_white_rounded  { 
+      @apply  medium-15 border border-white bg-white px-7 py-3 text-gray-90 rounded-full
+    }
+    .btn_white_hover { 
+      @apply  text-[14px] font-[500] border border-white bg-white px-7 py-2 text-gray-90 rounded-full hover:border-black hover:bg-black hover:text-white transition-all duration-300
+    }
+  
+    .btn_white_outline  { 
+      @apply  medium-15 border border-slate-10 bg-transparent px-7 py-3 text-slate-10 rounded-full
+    }
+  
+    .btn_dark_rounded { 
+      @apply  medium-15 border border-green-90 bg-green-90 px-7 py-3 text-white transition-all hover:bg-black rounded-full
+    }
+    .btn_dark_outline { 
+      @apply  medium-15 border border-green-90 bg-transparent px-7 py-3 text-green-90 transition-all hover:bg-black hover:text-white rounded-full
+    }
+  
+    .btn_secondary_rounded  { 
+      @apply  medium-15 border border-secondary bg-secondary px-7 py-3 text-white transition-all hover:bg-[#ff6b1c] rounded-full }
+  
+    .max-container {
+      @apply mx-auto max-w-[1440px];
+    }
+  
+    .padding-container {
+      @apply px-6 lg:px-20 3xl:px-0;
+    }
+    
+    .max_padd_container {
+      @apply mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0;
+    }
+  
+    .flexCenter {
+      @apply flex items-center justify-center;
+    }
+  
+    .flexBetween {
+      @apply flex items-center justify-between;
+    }
+  
+    .flexStart {
+      @apply flex items-center justify-start;
+    }
+  
+    .flexEnd {
+      @apply flex items-center justify-end;
+    }
+  
+    /* FONTS */
+    .regular-64 {
+      @apply text-[64px] font-[400] leading-[120%];
+    }
+  
+    .regular-52 {
+      @apply text-[52px] font-[400] leading-[120%];
+    }
+  
+    .regular-48 {
+      @apply text-[48px] font-[400] leading-[120%];
+    }
+  
+    .regular-40 {
+      @apply text-[40px] font-[400] leading-[120%];
+    }
+  
+    .regular-32 {
+      @apply text-[32px] font-[400];
+    }
+  
+    .regular-28 {
+      @apply text-[28px] font-[400];
+    }
+  
+    .regular-24 {
+      @apply text-[24px] font-[400];
+    }
+    .regular-22 {
+      @apply text-[22px] font-[400];
+    }
+  
+    .regular-20 {
+      @apply text-[20px] font-[400];
+    }
+  
+    .regular-18 {
+      @apply text-[18px] font-[400];
+    }
+  
+    .regular-16 {
+      @apply text-[16px] font-[400];
+    }
+  
+    .regular-15 {
+      @apply text-[15px] font-[400];
+    }
+    .regular-14 {
+      @apply text-[14px] font-[400];
+    }
+  
+    .medium-24 {
+      @apply text-[24px] font-[600];
+    }
+    .medium-22 {
+      @apply text-[22px] font-[600];
+    }
+    .medium-20 {
+      @apply text-[20px] font-[600];
+    }
+    .medium-18 {
+      @apply text-[18px] font-[600];
+    }
+  
+    .medium-16 {
+      @apply text-[16px] font-[600];
+    }
+  
+    .medium-15 {
+      @apply text-[15px] font-[600];
+    }
+    .medium-14 {
+      @apply text-[14px] font-[600];
+    }
+  
+    .bold-88 {
+      @apply text-[88px] font-[700] leading-[120%];
+    }
+  
+    .bold-64 {
+      @apply text-[64px] font-[700] leading-[120%];
+    }
+  
+    .bold-52 {
+      @apply text-[52px] font-[700] leading-[120%];
+    }
+  
+    .bold-48 {
+      @apply text-[48px] font-[700] leading-[120%];
+    }
+  
+    .bold-44 {
+      @apply text-[44px] font-[700] leading-[120%];
+    }
+  
+    .bold-40 {
+      @apply text-[40px] font-[700] leading-[120%];
+    }
+  
+    .bold-36 {
+      @apply text-[36px] font-[700] leading-[120%];
+    }
+    .bold-32 {
+      @apply text-[32px] font-[700] leading-[120%];
+    }
+  
+    .bold-28 {
+      @apply text-[28px] font-[700] leading-[120%];
+    }
+    .bold-24 {
+      @apply text-[24px] font-[700] leading-[120%];
+    }
+  
+    .bold-22 {
+      @apply text-[22px] font-[700];
+    }
+  
+    .bold-20 {
+      @apply text-[20px] font-[700];
+    }
+  
+    .bold-18 {
+      @apply text-[18px] font-[700];
+    }
+  
+    .bold-16 {
+      @apply text-[16px] font-[700];
+    }
+    .bold-15 {
+      @apply text-[15px] font-[700];
+    }
+  
+  }
+  
+  
