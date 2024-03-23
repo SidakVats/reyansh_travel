@@ -7,6 +7,8 @@ import Image from "next/image";
 
 import { FaQuoteLeft } from "react-icons/fa";
 
+import Accordion from "./Accordion";
+
 import Link from "next/link";
 
 const Testimonial = () => {
@@ -29,7 +31,7 @@ const Testimonial = () => {
 
   return (
     <section className='max_padd_container py-16 shadow-2xl bg-white relative'>
-        <div className='flex flex-col lg:flex-row gap-y-8'>
+        <div className='flex flex-col lg:flex-row gap-y-8 '>
             {/* left  */}
             <div className='px-5'>
                 <h4 className='bold-18 px-5 text-secondary'>HAPPY CUSTOMERS</h4>
@@ -49,6 +51,10 @@ const Testimonial = () => {
                     </Slider>
                 </div>
             </div>
+             {/* right  */}
+        <div>
+          <Accordion/>
+        </div>
         </div>
     </section>
   )
@@ -63,7 +69,7 @@ type TestimonialItem = {
   
   const TestimonialItem = ({ title, URL, des, profession }: TestimonialItem) => {
     return (
-      <div className='my-8 rounded-md z-10 ms-10'>
+      <div className='my-8 rounded-md z-10 mx-10'>
         <div className='pb-6'>
             <Image src={URL} alt={title} height={77} width={77} className='rounded-full mb-4'/>
             <div className=''>

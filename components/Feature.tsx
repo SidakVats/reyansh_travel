@@ -6,6 +6,7 @@ import Slider from "react-slick";
 
 import { LuArrowBigRightDash, LuArrowBigLeftDash  } from "react-icons/lu";
 
+
 const Features = () => {
 
   const NextArrow = (props:any) => {
@@ -80,8 +81,7 @@ const Features = () => {
           <div className="pt-12">
             <Slider {...settings} >
               {FEATURE.map((feature) => (
-                <FeatureItem
-                
+                <FeatureItem            
                   key={feature.URL}
                   URL={feature.URL}
                   title={feature.title}
@@ -91,6 +91,7 @@ const Features = () => {
             </Slider>
           </div>
         </div>
+       
       </section>
     </div>
   );
