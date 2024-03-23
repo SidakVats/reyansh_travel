@@ -64,7 +64,7 @@ const Features = () => {
 
   return (
     <div>
-      <section className="max_padd_container py-20 xl:py-32 bg-white">
+      <section className="max_padd_container shadow-2xl py-20 xl:py-32 bg-white">
         <div className="w-[90%] m-auto">
           <div className="mx-4">
             <h4 className="bold-18 text-secondary">WHAT WE SERVE</h4>
