@@ -11,9 +11,9 @@ const Nav = ({containerStyles, listStyles}: navProps) => {
         </Link>
       ))} */}
       <Link href="/" className={`${listStyles}`}>Home</Link>
-      <Link href="/About" className={`${listStyles}`}>About Us</Link>
-      <Link href="/Contact" className={`${listStyles}`}>Contact Us</Link>
       <Link href="/Packages" className={`${listStyles}`}>Our Packages</Link>
+      <Link href="/About" className={`${listStyles}`}>About Us</Link>
+      <Link href="/Contact" className={`${listStyles}`}>Contact</Link>
       <Link href="/Blog" className={`${listStyles}`}>Blog</Link>
     </nav>
   )

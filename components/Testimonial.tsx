@@ -35,7 +35,7 @@ const Testimonial = () => {
             {/* left  */}
             <div className='px-5'>
                 <h4 className='bold-18 px-5 text-secondary'>HAPPY CUSTOMERS</h4>
-                <h3 className='h3 px-4 max-w-lg'>Testimonials</h3>
+                <h3 className='h2 px-4 max-w-lg font2'>Testimonials</h3>
                 <div className='max-w-[666px] pt-5'>
                     <Slider {...settings} className='bg-[#e5e5e5] rounded-2xl'>
                         {TESTIMONIAL.map((test) => (

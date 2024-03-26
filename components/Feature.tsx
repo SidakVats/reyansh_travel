@@ -68,9 +68,9 @@ const Features = () => {
       <section className="max_padd_container shadow-2xl py-20 xl:py-32 bg-white">
         <div className="w-[90%] m-auto">
           <div className="mx-4">
-            <h4 className="bold-18 text-secondary">WHAT WE SERVE</h4>
-            <h3 className="h3 max-w-lg">We Provide Top Destinations</h3>
-            <p className="max-w-lg">
+            <h4 className="bold-18 text-secondary ">WHAT WE SERVE</h4>
+            <h3 className="h2 max-w-xl font2">We Provide Top Destinations</h3>
+            <p className="max-w-2xl">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
               adipisci quasi, corporis praesentium natus ea assumenda similique
               nemo hic doloremque qui cum ex veniam animi, amet numquam

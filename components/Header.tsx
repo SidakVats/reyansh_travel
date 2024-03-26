@@ -32,12 +32,12 @@ const Header = () => {
             </Link>
             {/* nav links  */}
             {/* for desktop */}
-            <Nav containerStyles={"hidden lg:flex gap-x-10 iems-start justify-center"} listStyles={"uppercase capitalized cursor-pointer my-4 relative transition-all"}/>
+            <Nav containerStyles={"hidden lg:flex gap-x-10 iems-start justify-center "} listStyles={"uppercase font3 text-lg capitalized cursor-pointer my-4 relative transition-all "}/>
             {/* for mobile  */}
-            <Nav containerStyles={`${menuOpened ? "flex items-start flex-col justify-center fixed top-20 p-12 bg-white rounded-lg transition-all duration-500 shadow-md right-3 w-60" : "flex items-start flex-col justify-center fixed top-20 p-12 bg-white rounded-lg transition-all duration-500 shadow-md right-[-100%] w-60"}`} listStyles={"capitalized cursor-pointer my-4 relative transition-all"}/>
+            <Nav containerStyles={`${menuOpened ? "flex items-start flex-col justify-center fixed top-20 p-12 bg-white rounded-lg transition-all duration-500 shadow-md right-3 w-60" : "flex items-start flex-col justify-center fixed top-20 p-12 bg-white rounded-lg transition-all duration-500 shadow-md right-[-100%] w-60"}`} listStyles={"capitalized uppercase font3 cursor-pointer my-4 relative transition-all"}/>
             {/* icons and buttons  */}
             <div className='flexCenter'>
-                <div className='hidden lg:block'>
+                <div className='hidden lg:block '>
                   <Button
                   type='button'
                   title='Book Now'

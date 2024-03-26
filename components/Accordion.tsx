@@ -18,8 +18,8 @@ const Accordion = () => {
   return (
     <div className="ms-5">
       <h4 className="text-secondary regular-20">FAQ</h4>
-      <h3 className="bold-44 max-w-96">Frequently Asked Questions</h3>
-      <div className="pt-6 max-w-[800px]">
+      <h3 className="h2 max-w-100 mt-3 font2">Frequently Asked Questions</h3>
+      <div className=" max-w-[800px]">
         {ACCORDION.map((item, index) => (
           <AccordionItem
             key={index}

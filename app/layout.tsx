@@ -1,21 +1,25 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Wix_Madefor_Text  } from "next/font/google";
+import { Montez } from "next/font/google";
 
-
-// styling 
+// styling
 import "slick-carousel/slick/slick.css";
 import "./globals.css";
 
-
-// components 
+// components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollButton from "@/components/ScrollButton";
 
+const Wix_Madefor_Text_init = Wix_Madefor_Text({
+  subsets: ['latin'],
+  variable: '--font-wix',
+});
 
-const nunito = Nunito({ 
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable:"--font-nunito",
+const Montez_init = Montez({
+  subsets: ['latin'],
+  variable: '--font-montez',
+  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -30,13 +34,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={`bg-primary text-tertiary overflow-x-hidden ${nunito.variable}`}>
-        <Header/>
+      <body className={`bg-primary text-tertiary overflow-x-hidden ${Wix_Madefor_Text_init.variable} ${Montez_init.variable}`}>
+        <Header />
         {children}
-        <Footer/>
+        <ScrollButton/>
+        <Footer />
       </body>
-      
     </html>
   );
 }

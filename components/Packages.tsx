@@ -11,7 +11,7 @@ const Packages = () => {
     <section className="max_padd_container py-16 xl:py-28 bg-slate-10">
       <div className="mx-4">
         <h4 className="bold-18 text-secondary">TAKE A LOOK AT THESE OFFERS</h4>
-        <h3 className="h3 max-w-lg">We Provide Top Destinations</h3>
+        <h3 className="h2 max-w-xl font2">We Provide Top Destinations</h3>
         <p className="max-w-3xl">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
           adipisci quasi, corporis praesentium natus ea assumenda similique nemo
@@ -64,16 +64,18 @@ const PackagesItem = ({
           height={366}
           className=" overflow-hidden group-hover:rotate-2  group-hover:scale-105 transition-all duration-500 "
         ></Image></div>
-        <span className="bold-16 text-white bg-tertiary absolute top-6 left-2  px-8 py-2 rounded-full group-hover:bg-secondary">
+        <span className="bold-16 text-white bg-tertiary absolute top-6 left-2  px-6 py-2 rounded-full group-hover:bg-secondary">
           ₹{price}
         </span>
       </Link>
       <div className="p-4 bg-white">
         <div className="capitalize medium-22">
-          <span className="group-hover:text-secondary">{title}</span>
+          <div className="pb-2">
+          <span className="group-hover:text-secondary ">{title}</span>
+          </div>
           <div className="flex items-center gap-x-2 my-1">
-            <IoLocationOutline className="text-gray-50" />
-            <span className="regular-16 text-gray-50">{location}</span>
+            <IoLocationOutline className="text-gray-50 group-hover:scale-105 transition-all duration-300" />
+            <span className="regular-16  text-gray-50 group-hover:scale-105 transition-all duration-300">{location}</span>
           </div>
         </div>
         <hr className="mt-3" />
@@ -90,9 +92,9 @@ const PackagesItem = ({
             </div>
             <span className="medium-16">(222)</span>
           </div>
-          <div className="flexStart gap-2 text-gray-50">
+          <div className="flexStart gap-2 text-gray-50 ">
             <PiClockCountdownFill className="text-lg" />{" "}
-            <span className="medium-16">{duration}</span>
+            <span className="medium-16 ">{duration}</span>
           </div>
         </div>
       </div>

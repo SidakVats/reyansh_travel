@@ -60,7 +60,7 @@ type FooterColumn = {
 const FooterColumn = ({ title, children }: FooterColumn) => {
   return (
    <div>
-    <h4>{title}</h4>
+    <h4 className="pb-3">{title}</h4>
     {children}
    </div>
   );
