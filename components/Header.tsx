@@ -38,12 +38,9 @@ const Header = () => {
             {/* icons and buttons  */}
             <div className='flexCenter'>
                 <div className='hidden lg:block '>
-                  <Button
-                  type='button'
-                  title='Book Now'
-                  icon='/user.svg'
-                  variant='btn_secondary_rounded'
-                  />
+                  <a href="/Contact"><div className='bg-[#ff894af1] px-10 py-2 rounded-full hover:bg-secondary cursor-pointer'>
+                    <span className='text-white text-xl'>Book Now</span>
+                  </div></a>
                 </div>
                 {!menuOpened ? (<GiHamburgerMenu className='lg:hidden inline-block cursor-pointer regular-24 hover:text-secondary' onClick={toggleMenu} />) : (<IoClose className='cursor-pointer regular-24 hover:text-secondary' onClick={toggleMenu}/>)}
             </div>
