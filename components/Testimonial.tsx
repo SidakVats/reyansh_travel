@@ -30,10 +30,10 @@ const Testimonial = () => {
     
 
   return (
-    <section className='max_padd_container py-16 shadow-2xl bg-white relative'>
+    <section className='max_padd_container rounded-2xl py-16 shadow-2xl bg-white relative'>
         <div className='flex flex-col lg:flex-row gap-y-8 '>
             {/* left  */}
-            <div className='px-5'>
+            <div className='ms-5'>
                 <h4 className='bold-18 px-5 text-secondary'>HAPPY CUSTOMERS</h4>
                 <h3 className='h2 px-4 max-w-lg font2'>Testimonials</h3>
                 <div className='max-w-[666px] pt-5'>

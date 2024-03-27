@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="max_padd_container flexCenter pb-14 pt-20 bg-pattern bg-cover bg-center bg-no-repeat">
+    <footer className="mt-10 rounded-t-2xl flexCenter pb-14 pt-20  bg-pattern bg-cover bg-center bg-no-repeat">
       <div className="flex flex-col rounded-xl">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row p-8 bg-primary rounded-t-xl">
-          <div className="flex flex-wrap gap-8 sm:justify-between md:flex-1">
+          <div className="flex flex-wrap gap-8 md:gap-12 lg:gap-32 sm:justify-between md:flex-1">
             {FOOTER_LINKS.map((col) => (
                 <FooterColumn
                 key={col.title}
@@ -38,7 +38,7 @@ const Footer = () => {
                     <ul className="flex gap-4">
                       {SOCIALS.links.map((link) => (
                           <Link href={"/"} key={link}>
-                            <Image src={link} alt="logo" height={22} width={22}/>
+                            <Image src={link} alt="logo" height={22} width={22} />
                           </Link>
                       ))}
                     </ul>
@@ -49,6 +49,9 @@ const Footer = () => {
         <p className="regular-14 bg-secondary text-white py-2 px-8 rounded-b-xl flexBetween"><span>@2024 Reyansh Travels</span> <span>All Rights Reserved</span></p>
       </div>
     </footer>
+
+
+
   );
 };
 
