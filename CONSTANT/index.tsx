@@ -168,6 +168,83 @@ export const PACKAGE = [
   },
 ];
 
+
+export const HOTEL = [
+  {
+    title: "Umiltà 36",
+    location: "Italy",
+    price: "30,175",
+    URL: "/hotel1.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "3.9 km from center",
+  },
+  {
+    title: "The St. Regis Rome",
+    location: "Italy",
+    price: "50,000",
+    URL: "/hotel2.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "1.6 km from center",
+  },
+
+  {
+    title: "Hotel Martis Palace",
+    location: "Italy",
+    price: "15,000",
+    URL: "/hotel3.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "5.9 km from center",
+  },
+  {
+    title: "Effe Luxury Palace",
+    location: "Italy",
+    price: "45,000",
+    URL: "/hotel4.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "3.3 km from center",
+  },
+  {
+    title: "CC Palace Hotel",
+    location: "Italy",
+    price: "1,10,000",
+    URL: "/hotel5.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "3.1 km from center",
+  },
+  {
+    title: "Monastero dei Santi",
+    location: "Italy",
+    price: "21,000",
+    URL: "/hotel6.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "2.2 km from center",
+  },
+  {
+    title: "The Hoxton, Rome",
+    location: "Italy",
+    price: "69,000",
+    URL: "/hotel7.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "5.8 km from center",
+  },
+  {
+    title: "Hotel Villa Duse",
+    location: "Italy",
+    price: "39,000",
+    URL: "/hotel8.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "7.1 km from center",
+  },
+  {
+    title: "W Rome",
+    location: "Italy",
+    price: "71,000",
+    URL: "/hotel9.jpg",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere cumque nesciunt quidem architecto pariatur?",
+    duration: "3.4 km from center",
+  },
+];
+
 export const TESTIMONIAL = [
   {
     title: "Sidak Vats",

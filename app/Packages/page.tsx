@@ -53,7 +53,7 @@ const Page: React.FC = () => {
         {/* Content */}
         <div className="w-full h-max pt-28 pb-12 flex gap-y-3 flex-col justify-center m-auto z-20 lg:pt-64 lg:pb-24">
           <div className="px-0 py-8 text-white  lg:ms-20">
-            <span className="uppercase regular-18 px-5">
+            <span className="uppercase regular-18 px-5 sm:text-xl">
               TRAVEL TO ANY CORNER OF WORLD
             </span>
             <h2 className="h2 max-w-[777px] px-5">
