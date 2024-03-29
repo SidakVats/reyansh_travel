@@ -19,6 +19,7 @@ const Packages = () => {
           esse necessitatibus.
         </p>
       </div>
+      
       <div className="grid gap-8 grid-col-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-col-4 py-12">
         {PACKAGE.map((elem) => (
           <PackagesItem
@@ -70,8 +71,9 @@ const PackagesItem = ({
       </Link>
       <div className="p-4 bg-white">
         <div className="capitalize medium-22">
-          <div className="pb-2">
+          <div className="pb-2 flexBetween">
           <span className="group-hover:text-secondary ">{title}</span>
+          <span className="bg-tertiary text-white px-4 py-1 rounded-2xl regular-18 hover:bg-secondary"><a href="/Contact">Book Now</a></span>
           </div>
           <div className="flex items-center gap-x-2 my-1">
             <IoLocationOutline className="text-gray-50 group-hover:scale-105 transition-all duration-300" />
