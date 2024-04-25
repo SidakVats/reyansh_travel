@@ -207,9 +207,10 @@ const VideoCarousel = () => {
                 <video
                   id="video"
                   playsInline
-                  className={`${
-                    list.id === 2 ? "translate-x-44" : ""
-                  } pointer-events-none w-full`}
+                  className={` pointer-events-none w-full`}
+                  // ${
+                  //   list.id === 2 ? "translate-x-44" : ""
+                  // }
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el!)}
@@ -226,14 +227,14 @@ const VideoCarousel = () => {
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
-              <div className=" absolute top-12 left-0 bg-tertiary text-white px-4 py-2 rounded-r-full group-hover:bg-secondary  group-hover:!pr-8 transition-all duration-300 xs:hidden">
+              <div className=" absolute top-12 left-0 bg-tertiary text-white px-4 py-2 rounded-r-full group-hover:bg-secondary  group-hover:!pr-8 transition-all duration-300">
                 {list.textLists.map((text, idx) => (
                   <p key={idx} className="text-lg group-hover:text-white  ">
                     {text}
                   </p>
                 ))}
               </div>
-              <div className=" absolute bottom-6 right-0 bg-tertiary text-white px-4 py-2 rounded-l-full group-hover:bg-secondary group-hover:!pr-8 transition-all duration-300 xs:hidden">
+              <div className=" absolute bottom-10 right-0 bg-tertiary text-white px-4 py-2 rounded-l-full group-hover:bg-secondary group-hover:!pr-8 transition-all duration-300">
                 <p className="text-lg group-hover:text-white ">{list.des}</p>
               </div>
             </div>
