@@ -18,33 +18,41 @@ const VideoCarousel = () => {
     {
       id: 1,
       textLists: [
-        "Enter A17 Pro.",
-        "Game‑changing chip.",
-        "Groundbreaking performance.",
+        "Discover Italy",
+        // "Where Every Moment Echoes Romance",
       ],
-      video: "/explore.mp4",
+      des: "Where Passion Meets History",
+      video: "/carousel1.mp4",
       videoDuration: 4,
     },
     {
       id: 2,
-      textLists: ["Titanium.", "So strong. So light. So Pro."],
-      video: "/explore.mp4",
+      textLists: [
+        "Experience Russia ",
+        // "Explore a Land of Endless Wonders"
+      ],
+      des: "Where History Beckons at Every Turn",
+      video: "/carousel2.mp4",
       videoDuration: 5,
     },
     {
       id: 3,
       textLists: [
-        "iPhone 15 Pro Max has the",
-        "longest optical zoom in",
-        "iPhone ever. Far out.",
+        // "U.S.A",
+        "Statue of Liberty ",
       ],
-      video: "/explore.mp4",
+      des: "Beacon of Hope, Symbol of Freedom",
+      video: "/carousel3.mp4",
       videoDuration: 2,
     },
     {
       id: 4,
-      textLists: ["All-new Action button.", "What will yours do?"],
-      video: "/explore.mp4",
+      textLists: [
+        "Discover Africa ",
+        // "Where Nature, Culture, and Adventure Converge","From Savannas to Cities, a World of Discovery"
+      ],
+      des: "Where Nature, Culture, and Adventure Converge",
+      video: "/carousel4.mp4",
       videoDuration: 3.63,
     },
   ];
@@ -187,33 +195,46 @@ const VideoCarousel = () => {
 
   return (
     <>
-      <div className="flex items-center mt-12 mx-10">
+      <div className="flex items-center mt-12 mx-10 ">
         {highlightsSlides.map((list, i) => (
-          <div key={list.id} id="slider" className="sm:pr-20 pr-10">
-            <div className="relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]">
+          <div
+            key={list.id}
+            id="slider"
+            className="sm:pr-20 pr-10 group cursor-pointer "
+          >
+            <div className="relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh] shadow-2xl rounded-3xl">
               <div className="w-full h-full flex items-center justify-center rounded-3xl overflow-hidden bg-black">
                 <video
                   id="video"
                   playsInline
-                  className={`${list.id === 2 ? "translate-x-44" : ""} pointer-events-none w-full`}
+                  className={`${
+                    list.id === 2 ? "translate-x-44" : ""
+                  } pointer-events-none w-full`}
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el!)}
                   onEnded={() =>
-                    i !== 3 ? handleProcess("video-end", i) : handleProcess("video-last")
+                    i !== 3
+                      ? handleProcess("video-end", i)
+                      : handleProcess("video-last")
                   }
-                  onPlay={() => setVideo((prev) => ({ ...prev, isPlaying: true }))}
+                  onPlay={() =>
+                    setVideo((prev) => ({ ...prev, isPlaying: true }))
+                  }
                   onLoadedMetadata={() => handleLoadedMetaData(i)}
                 >
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
-              <div className="absolute top-12 left-[5%] z-10">
+              <div className=" absolute top-12 left-0 bg-tertiary text-white px-4 py-2 rounded-r-full group-hover:bg-secondary  group-hover:!pr-8 transition-all duration-300 xs:hidden">
                 {list.textLists.map((text, idx) => (
-                  <p key={idx} className="md:text-2xl text-xl font-medium">
+                  <p key={idx} className="text-lg group-hover:text-white  ">
                     {text}
                   </p>
                 ))}
+              </div>
+              <div className=" absolute bottom-6 right-0 bg-tertiary text-white px-4 py-2 rounded-l-full group-hover:bg-secondary group-hover:!pr-8 transition-all duration-300 xs:hidden">
+                <p className="text-lg group-hover:text-white ">{list.des}</p>
               </div>
             </div>
           </div>
