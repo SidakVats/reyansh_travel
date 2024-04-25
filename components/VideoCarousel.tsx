@@ -1,16 +1,30 @@
 "use client"; // Added "use client" at the top
 
 // Import necessary modules and types from Next.js
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
-// Import your constants and assets
 import pauseImg from "../public/pause.svg";
 import playImg from "../public/play.svg";
 import replayImg from "../public/replay.svg";
+
+const styles = `
+/* CSS for hiding on small screens */
+@media only screen and (max-width: 767px) {
+  #hidetext {
+    display: none;
+  }
+}
+
+/* CSS for displaying on medium and large screens */
+@media only screen and (min-width: 768px) {
+  #hidetext {
+    display: block;
+  }
+}
+`;
 
 // Define the VideoCarousel component
 const VideoCarousel = () => {
@@ -207,10 +221,7 @@ const VideoCarousel = () => {
                 <video
                   id="video"
                   playsInline
-                  className={` pointer-events-none w-full`}
-                  // ${
-                  //   list.id === 2 ? "translate-x-44" : ""
-                  // }
+                  className={` pointer-events-none w-full `}
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el!)}
@@ -227,14 +238,20 @@ const VideoCarousel = () => {
                   <source src={list.video} type="video/mp4" />
                 </video>
               </div>
-              <div className=" absolute top-12 left-0 bg-tertiary text-white px-4 py-2 rounded-r-full group-hover:bg-secondary  group-hover:!pr-8 transition-all duration-300">
+              <div
+                id="hidetext"
+                className=" absolute top-12 left-0 bg-tertiary text-white px-4 py-2 rounded-r-full group-hover:bg-secondary  group-hover:!pr-8 transition-all duration-300"
+              >
                 {list.textLists.map((text, idx) => (
                   <p key={idx} className="text-lg group-hover:text-white  ">
                     {text}
                   </p>
                 ))}
               </div>
-              <div className=" absolute bottom-10 right-0 bg-tertiary text-white px-4 py-2 rounded-l-full group-hover:bg-secondary group-hover:!pr-8 transition-all duration-300">
+              <div
+                id="hidetext"
+                className=" absolute bottom-10 right-0 bg-tertiary text-white px-4 py-2 rounded-l-full group-hover:bg-secondary group-hover:!pr-8 transition-all duration-300"
+              >
                 <p className="text-lg group-hover:text-white ">{list.des}</p>
               </div>
             </div>
@@ -272,6 +289,7 @@ const VideoCarousel = () => {
           />
         </button>
       </div>
+      <style>{styles}</style>
     </>
   );
 };
