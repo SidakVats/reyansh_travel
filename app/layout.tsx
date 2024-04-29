@@ -10,6 +10,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollButton from "@/components/ScrollButton";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const Wix_Madefor_Text_init = Wix_Madefor_Text({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body className={`bg-primary text-tertiary overflow-x-hidden ${Wix_Madefor_Text_init.variable} ${Montez_init.variable}`}>
         <Header />
@@ -40,6 +42,6 @@ export default function RootLayout({
         <ScrollButton/>
         <Footer />
       </body>
-    </html>
+    </html></ClerkProvider>
   );
 }

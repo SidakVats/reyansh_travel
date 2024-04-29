@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { IoLogInSharp } from "react-icons/io5";
+import { ClerkProvider, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
         <Link href={"/"}>
           <img
             className="flexCenter py-3 px-5"
-            src="/logo.svg"
+            src="/logo2.png"
             alt="logo"
             height={133}
             width={133}
@@ -68,14 +69,26 @@ const Header = () => {
                   icon='/user.svg'
                   variant='btn_secondary_rounded'
                   /> */}
-            <a href="/Contact">
-              <div className="bg-[#ff894af1] gap-1 px-10 py-2 flex rounded-full hover:bg-secondary cursor-pointer">
-                <span className="text-white">
-                  <IoLogInSharp className="text-2xl mt-1" />
-                </span>
-                <span className="text-white text-xl">LogIn</span>
-              </div>
-            </a>
+            
+              <SignedIn>
+                
+                  <div className="mt-1">
+                   <UserButton />
+                  
+                </div>
+              </SignedIn>
+
+              <SignedOut>
+                <a href="/sign-in">
+                  <div className="bg-[#ff894af1] gap-1 px-10 py-2 flex rounded-full hover:bg-secondary cursor-pointer">
+                    <span className="text-white">
+                      <IoLogInSharp className="text-2xl mt-1" />
+                    </span>
+                    <span className="text-white text-xl">LogIn</span>
+                  </div>
+                </a>
+              </SignedOut>
+            
           </div>
           {!menuOpened ? (
             <GiHamburgerMenu
