@@ -46,7 +46,7 @@ const Header = () => {
         <Nav
           containerStyles={"hidden lg:flex gap-x-10 iems-start justify-center "}
           listStyles={
-            "uppercase font3 text-lg capitalized cursor-pointer my-4 relative transition-all "
+            "uppercase font3 text-lg capitalized cursor-pointer my-4 relative hover:text-secondary transition-all duration-500"
           }
         />
         {/* for mobile  */}
@@ -59,6 +59,7 @@ const Header = () => {
           listStyles={
             "capitalized uppercase font3 cursor-pointer my-4 relative transition-all"
           }
+          
         />
         {/* icons and buttons  */}
         <div className="flexCenter">
@@ -108,3 +109,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
